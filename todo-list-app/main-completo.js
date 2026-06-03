@@ -1,12 +1,15 @@
+/*
+ * main-completo.js
+ * Versão completa da lógica da lista de tarefas, com todos os objetivos atingidos.
+ * Formato simples e legível, seguindo a ordem de implementação do projeto.
+ */
 
-
+// 1. Seleção dos elementos principais do HTML (Aula 3)
 const inputTarefa = document.getElementById('tarefa-input');
 const botaoAdicionar = document.getElementById('adicionar-btn');
 const listaTarefas = document.getElementById('lista-tarefas');
 
-
-
-/// 2. Função para adicionar uma nova tarefa na lista (Aula 3)
+// 2. Função para adicionar uma nova tarefa na lista (Aula 3)
 function adicionarTarefa() {
   const textoDaTarefa = inputTarefa.value.trim();
 
@@ -50,14 +53,13 @@ function adicionarTarefa() {
   inputTarefa.focus();
 }
 
-
-
+// 8. Função para editar a tarefa no mesmo lugar (próximo objetivo)
 function editarTarefa(spanTexto) {
   const textoAtual = spanTexto.textContent;
   const textoEditado = prompt('Edite a tarefa:', textoAtual);
 
   if (textoEditado === null) {
-    return; 
+    return; // Usuário cancelou a edição
   }
 
   const textoLimpo = textoEditado.trim();
@@ -70,18 +72,10 @@ function editarTarefa(spanTexto) {
   spanTexto.textContent = textoLimpo;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
+// 9. Função para remover a tarefa da lista (próximo objetivo)
+function deletarTarefa(novaLi) {
+  listaTarefas.removeChild(novaLi);
+}
 
 // 10. Evento do botão Adicionar conectado à função adicionarTarefa
 botaoAdicionar.addEventListener('click', adicionarTarefa);

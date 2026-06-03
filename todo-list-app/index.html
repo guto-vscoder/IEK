@@ -1,3 +1,4 @@
+<!-- Estrutura base do HTML e metadados para responsividade e suporte a acentuação -->
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -7,17 +8,21 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <!-- Container principal da aplicação e elementos de interface da lista de tarefas -->
   <div id="app">
     <h1>Tarefa</h1>
 
+    <!-- Caixa de entrada com campo de texto e botão de adicionar tarefa -->
     <div id="input-container">
       <input type="text" id="tarefa-input" placeholder="Digite uma nova tarefa...">
       <button id="adicionar-btn">Adicionar</button>
     </div>
 
+    <!-- Lista não ordenada que receberá as tarefas adicionadas dinamicamente -->
     <ul id="lista-tarefas"></ul>
   </div>
 
+  <!-- Inclusão do script JavaScript para lógica da aplicação no final do body -->
   <script src="./main.js"></script>
 </body>
 </html>
