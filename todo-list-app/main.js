@@ -51,13 +51,14 @@ function adicionarTarefa() {
 }
 
 
-
+  // 8. Função para editar a tarefa
 function editarTarefa(spanTexto) {
   const textoAtual = spanTexto.textContent;
   const textoEditado = prompt('Edite a tarefa:', textoAtual);
 
+
   if (textoEditado === null) {
-    return; 
+    return; // Usuário cancelou a edição
   }
 
   const textoLimpo = textoEditado.trim();
@@ -68,20 +69,19 @@ function editarTarefa(spanTexto) {
   }
 
   spanTexto.textContent = textoLimpo;
+
 }
 
+// 9. Função para deletar a tarefa
 
+function deletarTarefa(novaLi) {
+  listaTarefas.removeChild(novaLi);
 
-
-
-
-
-
-
-
-
+}
 
 
 
 // 10. Evento do botão Adicionar conectado à função adicionarTarefa
 botaoAdicionar.addEventListener('click', adicionarTarefa);
+
+

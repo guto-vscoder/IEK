@@ -53,6 +53,10 @@ function adicionarTarefa() {
   inputTarefa.focus();
 }
 
+
+
+
+
 // 8. Função para editar a tarefa no mesmo lugar (próximo objetivo)
 function editarTarefa(spanTexto) {
   const textoAtual = spanTexto.textContent;
@@ -71,6 +75,10 @@ function editarTarefa(spanTexto) {
 
   spanTexto.textContent = textoLimpo;
 }
+
+
+
+
 
 // 9. Função para remover a tarefa da lista (próximo objetivo)
 function deletarTarefa(novaLi) {
